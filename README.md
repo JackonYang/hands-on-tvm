@@ -63,8 +63,8 @@
 
 1. 个人理解，属于 TVM 定制开发，而且是针对 relax 前端的。普通用户不需要。
 2. 现在用的都是 relay，前端的算子注册跟 relax 也不一样。学会了也没啥用。
-3. 通读一下，了解图前端如何转模型和算子的，还不错。
-4. 高性能算子的注册，跟这个完全不一样。要写 Tensor Expression 和 TVMScript，见 2、3 节。
+3. 如果是新手，通读一下，了解图前端如何转模型和算子的，还不错。
+4. 注意：高性能算子的开发和注册，跟这个不一样。要写 Tensor Expression 和 TVMScript，见 2、3 节。
 
 [7_GPU_and_Specialized_Hardware.ipynb](mlc-ai-notebooks/7_GPU_and_Specialized_Hardware.ipynb)
 
@@ -75,11 +75,11 @@
 [8_GPU_and_Specialized_Hardware_part2.ipynb](mlc-ai-notebooks/8_GPU_and_Specialized_Hardware_part2.ipynb)
 
 1. 讲的是 NPU 和 FPGA。
-2. 个人的经验，开源 TVM 直接支持 NPU，问题还是很多的。完全不像陈天奇说的那么简单。
-3. 华为海思使用 TVM，据说是一二百人做了两三年才开始真的产生商业价值。
+2. 个人的经验，坑还是很多的，而且有些坑是 TVM 架构难以处理的。完全不像陈天奇说的这么简单。
+3. 华为海思使用 TVM，据说是一二百人做了两三年才开始产生商业价值。
 
 [9_Computational_Graph_Optimization.ipynb](mlc-ai-notebooks/9_Computational_Graph_Optimization.ipynb)
 
 1. 讲的主要是如何用 pattern match and rewrite 做算子融合。
 2. 此处的算子融合，还是基于规则的。信息量不大。
-3. pattern match and rewrite 是编译器的基本功。没做过编译器的，可以练练手。
+3. pattern match and rewrite 是编译器的基本功。没做过编译器的话，可以练练手。
