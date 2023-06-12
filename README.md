@@ -1,5 +1,15 @@
 # Hands on TVM
 
+## Step 0: TVM Overview
+
+[冯思远-Learning-based Deep Learning Compiler](https://www.bilibili.com/video/BV1T5411W7o8/): b 站视频。
+
+30 分钟，讲了为什么要做 TVM，& AutoTVM 的基本原理。
+
+简明扼要，新手友好。
+
+冯思源是 TVM 的核心贡献者之一，上交大毕业。这个视频是给上交 2020 级的学生讲的。质量很高。
+
 ## Step 1: 陈天奇 - MLC 课程 Jupyter notebooks
 
 ### 对原 notebook 的改修
@@ -10,7 +20,7 @@
 
 1. 基于 tvm 仓库的代码。原课程基于 mlc-ai-nightly 库，虽然稳定，但与最新的 tvm API 不一样。
 2. 精简注释 & 代码。
-    - 目标群体是：要点突出，适合复习、快速查阅代码。
+    - 目标：要点突出，适合复习、快速查阅代码。
     - 原课程，细节详细，更适合萌新学习 tvm。
 
 备注：
@@ -83,3 +93,32 @@
 1. 讲的主要是如何用 pattern match and rewrite 做算子融合。
 2. 此处的算子融合，还是基于规则的。信息量不大。
 3. pattern match and rewrite 是编译器的基本功。没做过编译器的话，可以练练手。
+
+## Step 2: 用 TVM 跑模型 - 官方 docs 整理
+
+说明：
+
+1. 代码均来自 TVM 官方文档的 [User Tutorial](https://tvm.apache.org/docs/tutorial/index.html) 和 [How To Guides](https://tvm.apache.org/docs/how_to/index.html)
+2. 稍作修改和整理，目标，与 step 1 一样：要点突出，适合复习、快速查阅代码。
+3. 原文档，细节详细，更适合萌新学习 tvm。
+
+
+[01-build-run-dl-models-tvm.ipynb](01-build-run-dl-models-tvm.ipynb)
+
+茴香豆的茴有几种写法? -- 跟 TVM 编译模型的方法一样多。
+
+1. TVM build & run 模型，有多种 API 组合可选。粗读代码发现，一套 API 组合对应一套轮子。
+2. 功能基本一样，用起来也基本一样。我感觉，掌握一套即可。
+3. 我选了 `relay.build` + `tvm.contrib.graph_executor`，可以 `export_library` API 把编译后的模型保存为 `.so` 文件，方便 deploy 分发。
+
+TODO:
+
+1. Auto-Tune with Templates and AutoTVM
+2. Use AutoScheduler for Template-Free Scheduling
+3. dynamic shape, relax, unity & Nimble
+4. TVM Papers: [https://tvm.apache.org/docs/reference/publications.html](https://tvm.apache.org/docs/reference/publications.html)
+
+optional:
+
+1. microTVM: TVM on bare-metal
+2. VTA: Versatile Tensor Accelerator
