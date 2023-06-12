@@ -102,8 +102,7 @@
 2. 稍作修改和整理，目标，与 step 1 一样：要点突出，适合复习、快速查阅代码。
 3. 原文档，细节详细，更适合萌新学习 tvm。
 
-
-[01-build-run-dl-models-tvm.ipynb](01-build-run-dl-models-tvm.ipynb)
+[01-build-run-dl-models-tvm.ipynb](tutorial-and-how-to/01-build-run-dl-models-tvm.ipynb)
 
 茴香豆的茴有几种写法? -- 跟 TVM 编译模型的方法一样多。
 
@@ -116,7 +115,7 @@ TODO:
 1. Auto-Tune with Templates and AutoTVM
 2. Use AutoScheduler for Template-Free Scheduling
 3. dynamic shape, relax, unity & Nimble
-4. https://github.com/mlc-ai/mlc-llm
+4. <https://github.com/mlc-ai/mlc-llm>
 5. TVM Papers: [https://tvm.apache.org/docs/reference/publications.html](https://tvm.apache.org/docs/reference/publications.html)
 
 optional:
