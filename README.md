@@ -116,7 +116,8 @@ TODO:
 1. Auto-Tune with Templates and AutoTVM
 2. Use AutoScheduler for Template-Free Scheduling
 3. dynamic shape, relax, unity & Nimble
-4. TVM Papers: [https://tvm.apache.org/docs/reference/publications.html](https://tvm.apache.org/docs/reference/publications.html)
+4. https://github.com/mlc-ai/mlc-llm
+5. TVM Papers: [https://tvm.apache.org/docs/reference/publications.html](https://tvm.apache.org/docs/reference/publications.html)
 
 optional:
 
