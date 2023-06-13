@@ -38,35 +38,35 @@ num_threads = 1
 os.environ["TVM_NUM_THREADS"] = str(num_threads)
 
 
-# tuning_option = {
-#     "log_filename": log_file,
-#     "tuner": "random",
-#     "early_stopping": None,
-#     "measure_option": autotvm.measure_option(
-#         builder=autotvm.LocalBuilder(),
-#         runner=autotvm.LocalRunner(
-#             number=1, repeat=10, min_repeat_ms=0, enable_cpu_cache_flush=True
-#         ),
-#     ),
-# }
-
-device_key = "rk3399"
 tuning_option = {
     "log_filename": log_file,
-    "tuner": "xgb",
-    # "n_trial": 1500,
-    "early_stopping": 800,
+    "tuner": "random",
+    "early_stopping": None,
     "measure_option": autotvm.measure_option(
         builder=autotvm.LocalBuilder(),
-        runner=autotvm.RPCRunner(
-            device_key,
-            host="127.0.0.1",
-            port=9190,
-            number=1,
-            timeout=10,
+        runner=autotvm.LocalRunner(
+            number=1, repeat=10, min_repeat_ms=0, enable_cpu_cache_flush=True
         ),
     ),
 }
+
+# device_key = "rk3399"
+# tuning_option = {
+#     "log_filename": log_file,
+#     "tuner": "xgb",
+#     # "n_trial": 1500,
+#     "early_stopping": 800,
+#     "measure_option": autotvm.measure_option(
+#         builder=autotvm.LocalBuilder(),
+#         runner=autotvm.RPCRunner(
+#             device_key,
+#             host="127.0.0.1",
+#             port=9190,
+#             number=1,
+#             timeout=10,
+#         ),
+#     ),
+# }
 
 
 def tune_kernels(
