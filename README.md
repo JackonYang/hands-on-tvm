@@ -94,13 +94,15 @@
 2. 此处的算子融合，还是基于规则的。信息量不大。
 3. pattern match and rewrite 是编译器的基本功。没做过编译器的话，可以练练手。
 
-## Step 2: 用 TVM 跑模型 - 官方 docs 整理
+## Step 2: TVM 自动优化模型 - 官方 docs 精简版
 
 说明：
 
 1. 代码均来自 TVM 官方文档的 [User Tutorial](https://tvm.apache.org/docs/tutorial/index.html) 和 [How To Guides](https://tvm.apache.org/docs/how_to/index.html)
-2. 稍作修改和整理，目标，与 step 1 一样：要点突出，适合复习、快速查阅代码。
-3. 原文档，细节详细，更适合萌新学习 tvm。
+2. 稍作修改和整理，目标：要点突出，适合复习、快速查阅代码。
+3. 更详细的使用方法，需要看官方的文档、源码。
+4. 出于学习的目的，使用了比官方文档更小的模型 & 搜索空间。demo 不代表 AutoTVM 和 TVM Ansor 的优化效果差异。
+
 
 [01-build-run-dl-models-tvm.ipynb](tutorial-and-how-to/01-build-run-dl-models-tvm.ipynb)
 
