@@ -120,9 +120,16 @@
     - 模型优化相关的代码，一共不到 10 行代码。
 
 
+[03-autotvm-tune-with-templates.ipynb](tutorial-and-how-to/03-autotvm-tune-with-templates.ipynb)
+
+1. 使用 autotvm 自动优化 AlexNet 模型。
+2. 搜索 13min，模型加速 5x。硬件: Intel(R) Xeon(R) Gold 5320 CPU。
+3. 原理上需要写 template，但 CPU/GPU 上，使用默认 template，无脑暴力搜，结果也不错。
+4. 代码量比 ansor 稍微多一点，但也非常简单。
+
+
 TODO:
 
-1. Auto-Tune with Templates and AutoTVM
 3. dynamic shape, relax, unity & Nimble
 4. <https://github.com/mlc-ai/mlc-llm>
 5. TVM Papers: [https://tvm.apache.org/docs/reference/publications.html](https://tvm.apache.org/docs/reference/publications.html)
