@@ -102,7 +102,7 @@
 2. 稍作修改和整理，目标：要点突出，适合复习、快速查阅代码。
 3. 更详细的使用方法，需要看官方的文档、源码。
 4. 出于学习的目的，使用了比官方文档更小的模型 & 搜索空间。demo 不代表 AutoTVM 和 TVM Ansor 的优化效果差异。
-
+5. Mac M1 上，AutoTVM 和 Ansor 都抛异常，与 rpc 有关，具体原因未分析。个人怀疑，如果熟悉 tvm 和 rpc 协议，应该是个不太难修的问题。
 
 [01-build-run-dl-models-tvm.ipynb](tutorial-and-how-to/01-build-run-dl-models-tvm.ipynb)
 
@@ -112,7 +112,6 @@
 2. 功能基本一样，用起来也基本一样。我感觉，掌握一套即可。
 3. 我选了 `relay.build` + `tvm.contrib.graph_executor`，可以 `export_library` API 把编译后的模型保存为 `.so` 文件，方便 deploy 分发。
 
-
 [02-tvm-ansor-template-free-tune.ipynb](tutorial-and-how-to/02-tvm-ansor-template-free-tune.ipynb)
 
 1. 使用 ansor (tvm.auto_scheduler) 自动优化 AlexNet 模型。
@@ -121,14 +120,12 @@
     - ansor 是 template free 的优化器，不要求理解模型和硬件。
     - 模型优化相关的代码，一共不到 10 行代码。
 
-
 [03-autotvm-tune-with-templates.ipynb](tutorial-and-how-to/03-autotvm-tune-with-templates.ipynb)
 
 1. 使用 autotvm 自动优化 AlexNet 模型。
 2. 搜索 13min，模型加速 5x。硬件: Intel(R) Xeon(R) Gold 5320 CPU。
 3. 原理上需要写 template，但 CPU/GPU 上，使用默认 template，无脑暴力搜，结果也不错。
 4. 代码量比 ansor 稍微多一点，但也非常简单。
-
 
 TODO:
 
