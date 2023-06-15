@@ -110,10 +110,19 @@
 2. 功能基本一样，用起来也基本一样。我感觉，掌握一套即可。
 3. 我选了 `relay.build` + `tvm.contrib.graph_executor`，可以 `export_library` API 把编译后的模型保存为 `.so` 文件，方便 deploy 分发。
 
+
+[02-tvm-ansor-template-free-tune.ipynb](tutorial-and-how-to/02-tvm-ansor-template-free-tune.ipynb)
+
+1. 使用 ansor (tvm.auto_scheduler) 自动优化 AlexNet 模型。
+2. 搜索 5min，模型加速 2x。硬件: Intel(R) Xeon(R) Gold 5320 CPU。
+3. 新人友好，上手简单。
+    - ansor 是 template free 的优化器，不要求理解模型和硬件。
+    - 模型优化相关的代码，一共不到 10 行代码。
+
+
 TODO:
 
 1. Auto-Tune with Templates and AutoTVM
-2. Use AutoScheduler for Template-Free Scheduling
 3. dynamic shape, relax, unity & Nimble
 4. <https://github.com/mlc-ai/mlc-llm>
 5. TVM Papers: [https://tvm.apache.org/docs/reference/publications.html](https://tvm.apache.org/docs/reference/publications.html)
